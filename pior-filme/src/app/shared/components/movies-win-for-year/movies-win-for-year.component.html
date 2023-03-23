@@ -1,0 +1,22 @@
+<div class="box">
+  <span class="title">List movies winners by year</span>
+
+  <input type="number" id="year"   (keyup.enter)="getMoviesForYear($event)" placeholder="Search by year">
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Year</th>
+      <th>Title</th>
+    </tr>
+    <tr *ngFor="let winner of winners">
+      <td>{{winner.id}}</td>
+      <td>{{winner.year}}</td>
+      <td>{{winner.title}}</td>
+    </tr>
+
+  </table>
+
+
+
+</div>

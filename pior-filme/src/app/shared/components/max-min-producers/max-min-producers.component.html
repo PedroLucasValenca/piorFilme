@@ -1,0 +1,36 @@
+<div class="box">
+  <span class="title">Producers with longest and shortest interval betwenn wins</span>
+
+  <table>
+    <tr>
+      <th>Producer</th>
+      <th>Interval</th>
+      <th>Previous Year</th>
+      <th>Following Year</th>
+    </tr>
+    <tr *ngFor="let producer of maxProducers">
+      <td>{{producer.producer}}</td>
+      <td>{{producer.interval}}</td>
+      <td>{{producer.previousWin}}</td>
+      <td>{{producer.followingWin}}</td>
+    </tr>
+
+  </table>
+
+  <table style="margin-top: 10px;">
+    <tr>
+      <th>Producer</th>
+      <th>Interval</th>
+      <th>Previous Year</th>
+      <th>Following Year</th>
+    </tr>
+    <tr *ngFor="let producer of minProducers">
+      <td>{{producer.producer}}</td>
+      <td>{{producer.interval}}</td>
+      <td>{{producer.previousWin}}</td>
+      <td>{{producer.followingWin}}</td>
+    </tr>
+
+  </table>
+
+</div>

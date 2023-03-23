@@ -1,0 +1,46 @@
+<div class="box">
+  <span class="title">List movies</span>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Year
+        <input type="number" id="filterYear" (keyup.enter)="filterYear($event)" placeholder="Filter by year">
+      </th>
+      <th>Title</th>
+      <th>Winner?
+        <select  name="yesOrNoSelect" id="yesOrNoSelect">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </th>
+    </tr>
+    <tr *ngFor="let movie of listMovies">
+      <td>{{movie.id}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.winner | yesOrNo}}</td>
+    </tr>
+
+  </table>
+
+  <ul class="pagination" >
+    <li >
+      <a [ngClass]="{disabled: currentPage === 1}" (click)="getMoviesPage(0)"><<</a>
+  </li>
+  <li>
+    <a (click)="getMoviesPage(currentPage - 1)"><</a>
+</li>
+    <li *ngFor="let page of totalPages; let i = index">
+      <a [id]="i" (click)="getMoviesPage(page)"[ngClass]="{active: currentPage === page}">{{page }}</a>
+    </li>
+    <li>
+      <a (click)="getMoviesPage(currentPage + 1)">></a>
+  </li>
+    <li>
+      <a [ngClass]="{disabled: currentPage === totalPages.length}" (click)="getMoviesPage(totalPages.length)">>></a>
+  </li>
+
+  </ul>
+
+</div>
+

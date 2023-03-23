@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: unset;
+  router-outlet + * {
+    width: 80%;
+    margin: 20px auto 0px auto;
+  }
+
+  @media (max-width: 600px) {
+
+    router-outlet + * {
+      width: 85%;
+      margin-top: 20px;
+    }
+
+  }
+}

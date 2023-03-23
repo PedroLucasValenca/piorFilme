@@ -1,0 +1,23 @@
+
+
+.disposition {
+  display: flex;
+
+  .menu{
+    width: 18%;
+    min-height: 780px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .disposition{
+    display: unset;
+    .menu {
+      min-height: unset;
+      width: 100%;
+    }
+  }
+
+}

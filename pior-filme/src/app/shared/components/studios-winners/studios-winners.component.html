@@ -1,0 +1,16 @@
+<div class="box">
+  <span class="title">Top 3 studios with winners</span>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Win Count</th>
+    </tr>
+    <tr *ngFor="let studio of studios">
+      <td>{{studio.name}}</td>
+      <td>{{studio.winCount}}</td>
+    </tr>
+
+  </table>
+
+</div>
